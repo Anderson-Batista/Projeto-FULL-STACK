@@ -15,8 +15,7 @@ public class ToDo implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
+	private Integer id;	
 	private String titulo;
 	private String descricacao;
 	private LocalDateTime dataParaFinalizar;
