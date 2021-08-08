@@ -14,4 +14,8 @@ public interface ToDoRepository extends JpaRepository<ToDo, Integer>{
 	@Query("SELECT obj FROM ToDo obj WHERE obj.finalizado = false ORDER BY obj.dataParaFinalizar")
 	List<ToDo> findAllOpen();
 
+	@Query("SELECT obj FROM ToDo obj WHERE obj.finalizado = true ORDER BY obj.dataParaFinalizar")
+	List<ToDo> findAllClose();
+
+	
 }
