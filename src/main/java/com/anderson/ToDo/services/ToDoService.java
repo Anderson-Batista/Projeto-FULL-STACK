@@ -1,5 +1,6 @@
 package com.anderson.ToDo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,11 @@ public class ToDoService {
 	public ToDo findById(Integer id) {
 		Optional<ToDo> obj = repository.findById(id);
 		return obj.orElse(null);
+	}
+
+	public List<ToDo> findAllOpen() {
+		List<ToDo> list = repository.findAllOpen();
+		return list;
 	}
 	
 }
